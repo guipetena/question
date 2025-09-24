@@ -1,0 +1,118 @@
+{
+  "questionnaireId": "1",
+  "questions": [
+    {
+      "questionId": "1",
+      "code": "FLOW",
+      "description": "Você quer falar sobre você ou seus pais?",
+      "categoryCode": "P",
+      "categoryDescription": "Personal",
+      "mandatory": true,
+      "answerDataTypeDescription": "combo",
+      "answers": [
+        {
+          "code": "FLOW_PERSONAL",
+          "description": "Quero falar sobre mim",
+          "childQuestion": { "code": "P1" }
+        },
+        {
+          "code": "FLOW_PARENTS",
+          "description": "Quero falar sobre meus pais",
+          "childQuestion": { "code": "PAR1" }
+        }
+      ]
+    },
+    {
+      "questionId": "2",
+      "code": "P1",
+      "description": "Qual é o seu nome?",
+      "categoryCode": "P",
+      "categoryDescription": "Personal",
+      "mandatory": true,
+      "answerDataTypeDescription": "simple-text"
+    },
+    {
+      "questionId": "3",
+      "code": "P2",
+      "description": "Qual é a sua idade?",
+      "categoryCode": "P",
+      "categoryDescription": "Personal",
+      "mandatory": true,
+      "answerDataTypeDescription": "simple-text"
+    },
+    {
+      "questionId": "4",
+      "code": "P3",
+      "description": "Qual é sua profissão?",
+      "categoryCode": "P",
+      "categoryDescription": "Personal",
+      "mandatory": true,
+      "answerDataTypeDescription": "simple-textarea"
+    },
+    {
+      "questionId": "5",
+      "code": "P4",
+      "description": "Você quer ser rico?",
+      "categoryCode": "P",
+      "categoryDescription": "Personal",
+      "mandatory": true,
+      "answerDataTypeDescription": "boolean",
+      "answers": [
+        {
+          "code": "P4_YES",
+          "description": "Sim, quero ser rico!"
+        },
+        {
+          "code": "P4_NO",
+          "description": "Não, estou satisfeito assim"
+        }
+      ]
+    },
+    {
+      "questionId": "6",
+      "code": "PAR1",
+      "description": "Qual o nome dos seus pais?",
+      "categoryCode": "F",
+      "categoryDescription": "Family",
+      "mandatory": true,
+      "answerDataTypeDescription": "simple-text"
+    },
+    {
+      "questionId": "7",
+      "code": "PAR2",
+      "description": "Qual a idade deles?",
+      "categoryCode": "F",
+      "categoryDescription": "Family",
+      "mandatory": true,
+      "answerDataTypeDescription": "date"
+    },
+    {
+      "questionId": "8",
+      "code": "PAR3",
+      "description": "Qual a profissão deles?",
+      "categoryCode": "F",
+      "categoryDescription": "Family",
+      "mandatory": true,
+      "answerDataTypeDescription": "simple-textarea"
+    },
+    {
+      "questionId": "9",
+      "code": "PAR4",
+      "description": "Eles querem ser ricos?",
+      "categoryCode": "F",
+      "categoryDescription": "Family",
+      "mandatory": true,
+      "answerDataTypeDescription": "boolean",
+      "answers": [
+        {
+          "code": "PAR4_YES",
+          "description": "Sim, eles querem ser ricos!"
+        },
+        {
+          "code": "PAR4_NO",
+          "description": "Não, estão satisfeitos assim"
+        }
+      ]
+    }
+  ]
+}

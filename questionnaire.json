@@ -1,0 +1,154 @@
+{
+  "questionnaireId": "1",
+  "questions": [
+    {
+      "questionId": "1",
+      "code": "FLOW",
+      "description": "Você quer falar sobre você ou seus pais?",
+      "categoryCode": "P",
+      "categoryDescription": "Personal",
+      "mandatory": true,
+      "answerDataTypeDescription": "combo",
+      "answers": [
+        {
+          "code": "FLOW_PERSONAL",
+          "description": "Quero falar sobre mim",
+          "childQuestion": {
+            "code": "P1"
+          }
+        },
+        {
+          "code": "FLOW_PARENTS",
+          "description": "Quero falar sobre meus pais",
+          "childQuestion": {
+            "code": "PAR1"
+          }
+        }
+      ]
+    },
+    {
+      "questionId": "2",
+      "code": "P1",
+      "description": "Qual é o seu nome?",
+      "categoryCode": "P",
+      "categoryDescription": "Personal",
+      "mandatory": true,
+      "answerDataTypeDescription": "simple-text",
+      "childQuestion": {
+        "code": "P2"
+      }
+    },
+    {
+      "questionId": "3",
+      "code": "P2",
+      "description": "Conte um pouco sobre você",
+      "categoryCode": "P",
+      "categoryDescription": "Personal",
+      "mandatory": true,
+      "answerDataTypeDescription": "simple-text",
+      "childQuestion": {
+        "code": "P3"
+      }
+    },
+    {
+      "questionId": "4",
+      "code": "P3",
+      "description": "Qual sua data de nascimento?",
+      "categoryCode": "P",
+      "categoryDescription": "Personal",
+      "mandatory": true,
+      "answerDataTypeDescription": "date",
+      "childQuestion": {
+        "code": "P4"
+      }
+    },
+    {
+      "questionId": "5",
+      "code": "P4",
+      "description": "Você quer ser rico?",
+      "categoryCode": "P",
+      "categoryDescription": "Personal",
+      "mandatory": true,
+      "answerDataTypeDescription": "boolean",
+      "answers": [
+        {
+          "code": "P4_YES",
+          "description": "Sim"
+        },
+        {
+          "code": "P4_NO",
+          "description": "Não"
+        }
+      ],
+      "nextActions": [
+        {
+          "typeCode": "OR",
+          "typeDescription": "Opening Reason",
+          "value": "OR:PERSONAL_FINAL"
+        }
+      ]
+    },
+    {
+      "questionId": "6",
+      "code": "PAR1",
+      "description": "Qual o nome dos seus pais?",
+      "categoryCode": "F",
+      "categoryDescription": "Family",
+      "mandatory": true,
+      "answerDataTypeDescription": "simple-text",
+      "childQuestion": {
+        "code": "PAR2"
+      }
+    },
+    {
+      "questionId": "7",
+      "code": "PAR2",
+      "description": "Qual sua renda mensal?",
+      "categoryCode": "F",
+      "categoryDescription": "Family",
+      "mandatory": true,
+      "answerDataTypeDescription": "amount",
+      "childQuestion": {
+        "code": "PAR3"
+      }
+    },
+    {
+      "questionId": "8",
+      "code": "PAR3",
+      "description": "Qual horário você trabalha?",
+      "categoryCode": "F",
+      "categoryDescription": "Family",
+      "mandatory": true,
+      "answerDataTypeDescription": "simple-text",
+      "childQuestion": {
+        "code": "PAR4"
+      }
+    },
+    {
+      "questionId": "9",
+      "code": "PAR4",
+      "description": "Eles querem ser ricos?",
+      "categoryCode": "F",
+      "categoryDescription": "Family",
+      "mandatory": true,
+      "answerDataTypeDescription": "boolean",
+      "answers": [
+        {
+          "code": "PAR4_YES",
+          "description": "Sim"
+        },
+        {
+          "code": "PAR4_NO",
+          "description": "Não"
+        }
+      ],
+      "nextActions": [
+        {
+          "typeCode": "OR",
+          "typeDescription": "Opening Reason",
+          "value": "OR:FAMILY_FINAL"
+        }
+      ]
+    }
+  ]
+}
